@@ -1,9 +1,7 @@
 tool:
   users:
     user:
-      name: user  # the local username you are using
-      xdg: true   # force $XDG_CONF_HOME/git/config instead of ~/.gitconfig
-      rbw:        # global git config
+      rbw:
         email: elliotalderson@protonmail.ch
         base_url: https://api.bitwarden.com/
         identity_url: https://identity.bitwarden.com/
@@ -12,4 +10,7 @@ tool:
 
   rbw:
     defaults:
-      gpg.sign: false
+      base_url: https://api.bitwarden.com/
+      identity_url: https://identity.bitwarden.com/
+      lock_timeout: 3600
+      pinentry: pinentry
