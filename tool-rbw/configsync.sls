@@ -14,4 +14,5 @@ rbw is setup for user '{{ user.name }}':
     - user: {{ user.name }}
     - group: {{ user.group }}
     - mode: '0600'
+    - makedirs: True
 {%- endfor %}
