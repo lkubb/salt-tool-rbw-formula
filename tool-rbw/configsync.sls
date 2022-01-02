@@ -1,6 +1,6 @@
 {%- from 'tool-rbw/map.jinja' import rbw %}
 
-{%- for user in rbw.users | selectattr('rbw.config') %}
+{%- for user in rbw.users | selectattr('rbw.config', 'defined') %}
 rbw is setup for user '{{ user.name }}':
   file.serialize:
     - name: {{ user._rbw.confdir }}/config.json

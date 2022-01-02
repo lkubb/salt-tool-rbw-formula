@@ -1,6 +1,6 @@
 {%- from 'tool-rbw/map.jinja' import rbw %}
 
-{%- if rbw.users | selectattr('dotconfig') %}
+{%- if rbw.users | selectattr('rbw.config', 'defined') %}
 include:
   - .configsync
 {%- endif %}
