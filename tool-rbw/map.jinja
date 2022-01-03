@@ -38,7 +38,7 @@ state: {{ salt['cmd.run']('[ -n "$XDG_STATE_HOME" ] && echo "${XDG_STATE_HOME}" 
     {%- do users[user].update({'xdg': xdg}) -%}
   {%- endif -%}
   {%- do users[user]['_rbw'].update({'confdir': salt['grains.filter_by']({
-    'Darwin': user.home ~ '/Library/Application Support/rbw',
+    'Darwin': users[user].home ~ '/Library/Application Support/rbw',
     'Linux': xdg.config
   }, grain='kernel')}) -%}
 {%- endfor -%}
