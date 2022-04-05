@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+#
+# Set default values.
+---
+values:
+  lookup:
+    pkg:
+      install_mode: cargo
+      name: rbw
+    paths:
+      confdir: '.config/rbw'
+      conffile: 'config.json'
+      xdg_dirname: 'rbw'
+      xdg_conffile: 'config.json'
+    rootgroup: root
+  # Just here for testing
+  added_in_defaults: defaults_value
+  winner: defaults
+...
