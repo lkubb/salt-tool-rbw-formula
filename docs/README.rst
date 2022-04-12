@@ -87,10 +87,6 @@ Formula-specific
     defaults:
       config: default value for all users
 
-Config file serialization
-~~~~~~~~~~~~~~~~~~~~~~~~~
-This formula serializes configuration into a config file. A default one is provided with the formula, but can be overridden via the TOFS pattern. See :ref:`tofs_pattern` for details.
-
 Dotfiles
 ~~~~~~~~
 ``tool_rbw.config.sync`` will recursively apply templates from
