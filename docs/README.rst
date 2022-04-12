@@ -30,8 +30,11 @@ The following shows an example of ``tool_rbw`` per-user configuration. If provid
 
   user:
 
-        # Force the usage of XDG directories for this user.
-      xdg: true
+      # Force the usage of XDG directories for this user.
+    xdg: true
+
+      # Put shell completions into this directory, relative to user home.
+    completions: '.config/zsh/completions'
 
       # Sync this user's config from a dotfiles repo.
       # The available paths and their priority can be found in the
@@ -186,3 +189,4 @@ Todo
 ----
 * currently, there is no way to force XDG dirs on MacOS
 * figure out testing with dependency on other repository
+* add completions for non-MacOS
