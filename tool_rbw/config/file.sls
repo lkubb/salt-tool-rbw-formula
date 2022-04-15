@@ -11,18 +11,18 @@ include:
   - {{ sls_package_install }}
 
 
-{%- for user in rbw.users | selectattr('rbw.config', 'defined') | selectattr('rbw.config') %}
+{%- for user in rbw.users | selectattr('rbw') %}
 
 rbw config file is managed for user '{{ user.name }}':
   file.serialize:
     - name: {{ user['_rbw'].conffile }}
     - serializer: json
     - dataset:
-        email: {{ user.rbw.config.email }}
-        base_url: {{ user.rbw.config.get('base_url', 'https://api.bitwarden.com/') }}
-        identity_url: {{ user.rbw.config.get('identity_url', 'https://identity.bitwarden.com/') }}
-        lock_timeout: {{ user.rbw.config.get('lock_timeout', 3600) }}
-        pinentry: {{ user.rbw.config.get('pinentry', 'pinentry') }}
+        email: {{ user.rbw.email }}
+        base_url: {{ user.rbw.get('base_url', 'https://api.bitwarden.com/') }}
+        identity_url: {{ user.rbw.get('identity_url', 'https://identity.bitwarden.com/') }}
+        lock_timeout: {{ user.rbw.get('lock_timeout', 3600) }}
+        pinentry: {{ user.rbw.get('pinentry', 'pinentry') }}
     - mode: '0600'
     - user: {{ user.name }}
     - group: {{ user.group }}
