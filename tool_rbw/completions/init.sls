@@ -10,8 +10,8 @@ include:
   - {{ sls_package_install }}
 
 
-{#- @TODO! https://github.com/sharkdp/bat/issues/2057
-{%- for user in rbw.users | selectattr('completions', 'defined') | selectattr('completions') %}
+{%- if 'Darwin' != grains.kernel %}
+{%-   for user in rbw.users | selectattr('completions', 'defined') | selectattr('completions') %}
 
 Completions directory for rbw is available for user '{{ user.name }}':
   file.directory:
@@ -23,13 +23,11 @@ Completions directory for rbw is available for user '{{ user.name }}':
 
 rbw shell completions are available for user '{{ user.name }}':
   cmd.run:
-    - name: rbw --completions {{ user.shell }} > {{ user.home | path_join(user.completions, '_rbw') }}
+    - name: rbw gen-completions {{ user.shell }} > {{ user.home | path_join(user.completions, '_rbw') }}
     - creates: {{ user.home | path_join(user.completions, '_rbw') }}
-    - onchanges:
-      - rbw is installed
     - runas: {{ user.name }}
     - require:
       - rbw is installed
       - Completions directory for rbw is available for user '{{ user.name }}'
-{%- endfor %}
-#}
+{%-   endfor %}
+{%- endif %}
