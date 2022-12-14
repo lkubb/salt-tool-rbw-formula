@@ -66,7 +66,7 @@ The following shows an example of ``tool_rbw`` per-user configuration. If provid
       config:
         base_url: https://api.bitwarden.com/
         email: elliotalderson@protonmail.ch
-        identity_url: https://identity.bitwarden.com/
+        identity_url: null
         lock_timeout: 3600
         pinentry: pinentry
 

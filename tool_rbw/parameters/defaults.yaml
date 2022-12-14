@@ -6,8 +6,8 @@
 values:
   lookup:
     pkg:
-      install_mode: cargo
       name: rbw
+      install_mode: cargo
     paths:
       confdir: '.config/rbw'
       conffile: 'config.json'

@@ -13,7 +13,7 @@ values:
         config:
           base_url: https://api.bitwarden.com/
           email: elliotalderson@protonmail.ch
-          identity_url: https://identity.bitwarden.com/
+          identity_url: null
           lock_timeout: 3600
           pinentry: pinentry
   added_in_defaults: defaults_value
@@ -25,8 +25,8 @@ values:
     master: template-master
     winner: lookup
     pkg:
-      install_mode: cargo
       name: rbw
+      install_mode: cargo
     paths:
       confdir: '.config/rbw'
       conffile: 'config.json'

@@ -37,13 +37,17 @@
       "has_completions": "y",
       "has_tests": "y",
       "git_username": "lkubb",
-      "_lookup": {},
+      "_lookup": {
+        "pkg": {
+          "install_mode": "cargo"
+        }
+      },
       "_settings": {},
       "_usersettings": {
         "config": {
           "email": "elliotalderson@protonmail.ch",
           "base_url": "https://api.bitwarden.com/",
-          "identity_url": "https://identity.bitwarden.com/",
+          "identity_url": null,
           "lock_timeout": 3600,
           "pinentry": "pinentry"
         }

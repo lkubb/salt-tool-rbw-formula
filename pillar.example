@@ -61,7 +61,7 @@ tool_global:
         config:
           base_url: https://api.bitwarden.com/
           email: elliotalderson@protonmail.ch
-          identity_url: https://identity.bitwarden.com/
+          identity_url: null
           lock_timeout: 3600
           pinentry: pinentry
 
@@ -94,8 +94,8 @@ tool_rbw:
 ######################################################################
   lookup:
     pkg:
-      install_mode: cargo
       name: rbw
+      install_mode: cargo
     rootgroup: root
     paths:
       confdir: '.config/rbw'

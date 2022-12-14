@@ -18,10 +18,10 @@ rbw config file is managed for user '{{ user.name }}':
     - serializer: json
     - dataset:
         email: {{ user.rbw.email }}
-        base_url: {{ user.rbw.get('base_url', 'https://api.bitwarden.com/') }}
-        identity_url: {{ user.rbw.get('identity_url', 'https://identity.bitwarden.com/') }}
-        lock_timeout: {{ user.rbw.get('lock_timeout', 3600) }}
-        pinentry: {{ user.rbw.get('pinentry', 'pinentry') }}
+        base_url: {{ user.rbw.get("base_url", "null") }}
+        identity_url: {{ user.rbw.get("identity_url", "null") }}
+        lock_timeout: {{ user.rbw.get("lock_timeout", "null") }}
+        pinentry: {{ user.rbw.get("pinentry", "null") }}
     - mode: '0600'
     - user: {{ user.name }}
     - group: {{ user.group }}
