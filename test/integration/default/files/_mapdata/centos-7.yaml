@@ -28,9 +28,10 @@ values:
       install_mode: cargo
       name: rbw
     paths:
-      install_method: cargo
       confdir: '.config/rbw'
       conffile: 'config.json'
+      xdg_dirname: 'rbw'
+      xdg_conffile: 'config.json'
     rootgroup: root
   map_jinja:
     sources:

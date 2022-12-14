@@ -28,6 +28,9 @@ tool_rbw:
     paths:
       confdir: '.config/rbw'
       conffile: 'config.json'
+      xdg_dirname: 'rbw'
+      xdg_conffile: 'config.json'
+    rootgroup: root
 
   tofs:
     # The files_switch key serves as a selector for alternative
