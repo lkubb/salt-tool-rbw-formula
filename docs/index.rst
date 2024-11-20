@@ -1,5 +1,5 @@
-Welcome to salt-tool-rbw-formula's documentation!
-=================================================
+Welcome to tool-rbw-formula's documentation!
+============================================
 
 .. toctree::
    :maxdepth: 2
